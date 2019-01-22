@@ -5,6 +5,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable()
 export class ReceptService {
     public receptLijst: string[];
+    public receptenLijst: string[];
     public toegevoegd: string;
     constructor() { }
     receptToevoegen(renaam, recalorien, reingredienten, retijd ): string{
@@ -25,5 +26,10 @@ export class ReceptService {
             this.toegevoegd ="toegevoegd";
         }
         return this.toegevoegd;
+    }
+    getAllrecepten() {
+        for (let i = 0; i < this.receptLijst.length; i++) {
+            this.receptenLijst.push(this.receptLijst[i]);
+        }
     }
 }
