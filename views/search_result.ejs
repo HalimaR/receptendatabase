@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>inhaalexamen</title>
+  <link rel='stylesheet' href='css/bootstrap.min.css'>
+</head>
+<body>
+  <h2>Result</h2>
+  <br/><br/>
+  <p class='product'>
+   <span><b>Name : </b><%= inhaalexamen.naam %></span><br/>
+   <span><b>examen : </b><%= inhaalexamen.examen %></span><br/>
+   <span><b>reden : </b><%= inhaalexamen.reden %></span><br/>
+  </p>
+
+  <form action='/delete' method='POST'>
+    <span><input type='hidden' name='name' value='<%=product.name%>'></span>
+    <span><button type='submit'>Delete</button></span>
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Products</title>
+  <link rel='stylesheet' href='css/bootstrap.min.css'>
+</head>
+<body>
+  <h1>student</h1>
+ <br/><br/>
+  <ul class='product'>
+  <% for(var i=0; i < inhaalexamen.length; i++) {%>
+    <li class='product'>
+      <span><b>naam : </b><%= inhaalexamen[i].naam %></span><br />
+      <span><b>examen : </b><%= inhaalexamen[i].examen %></span><br />
+      <span><b>reden : </b><%= inhaalexamen[i].reden %></span><br />
+    </li>
+  <% } %>
+  </ul>
+<br />
+<a href='/search'>Zoek student</a>
+
+</body>
+</html>
