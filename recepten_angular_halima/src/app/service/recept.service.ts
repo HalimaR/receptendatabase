@@ -8,13 +8,13 @@ export class ReceptService {
     public receptenLijst: string[];
     public toegevoegd: string;
     constructor() { }
-    receptToevoegen(renaam, recalorien, reingredienten, retijd ): string{
+    receptToevoegen(renaam, recalorien, reingredienten, retijd): Array<string>{
         var receptNaam: string ='';
         var calorien: string;
         var ingredienten: string;
         var tijd: string;
         if(localStorage.getItem(renaam) != undefined){
-            this.toegevoegd = "bestaat al";
+            console.log("bestaat al");
         }
         else{
             receptNaam = renaam;
@@ -23,13 +23,14 @@ export class ReceptService {
             tijd = retijd;
             this.receptLijst.push(calorien,ingredienten,tijd);
             localStorage.setItem(renaam,this.receptLijst[])
-            this.toegevoegd ="toegevoegd";
+            console.log("toegevoegd");
         }
-        return this.toegevoegd;
+        return this.receptLijst;
     }
-    getAllrecepten() {
-        for (let i = 0; i < this.receptLijst.length; i++) {
-            this.receptenLijst.push(this.receptLijst[i]);
+    getAllrecepten(receptlijst): Array<string>{
+        for (let i = 0; i < receptlijst.length; i++) {
+            this.receptenLijst.push(receptlijst[i]);
         }
+        return this.receptenLijst;
     }
 }

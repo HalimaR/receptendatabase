@@ -24,4 +24,15 @@
     <button type='submit' (ngSubmit)='onSubmit()'>Toevoegen</button>
     <br /><br />
   </form>
+  <button (click)='getAllrecept()'>Alle recepten tonen</button>
+  
+  <ul>
+    <li $ngFor='let recept of recepten'>
+      <label>naam :&nbsp;</label>{{ naam }}<br />
+      <label>calorien :&nbsp;</label>{{ calorien }}<br />
+      <label>ingredienten :&nbsp;</label>{{ ingredienten }}<br />
+      <label>tijd :&nbsp;</label>{{ tijd }}<br />
+    </li>
+  </ul>
+  
 </div>

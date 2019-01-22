@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ToevoegenComponent } from './toevoegen/toevoegen.component';
 import { ReceptService } from './service/recept.service';
+import { AllereceptenComponent } from './allerecepten/allerecepten.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ToevoegenComponent
+    ToevoegenComponent,
+    AllereceptenComponent
   ],
   imports: [
     BrowserModule,

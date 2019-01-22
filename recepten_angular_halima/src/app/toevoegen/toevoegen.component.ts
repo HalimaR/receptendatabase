@@ -15,7 +15,7 @@ export class ToevoegenComponent implements OnInit {
   public calorien: string;
   public ingredienten: string;
   public tijd: string;
-  public toevoegen: string;
+  public toevoegen: string[];
   receptForm: FormGroup;
   constructor(private receptservice: ReceptService) { }
 
@@ -26,6 +26,7 @@ export class ToevoegenComponent implements OnInit {
       ingredienten: new FormControl(''),
       tijd: new FormControl('')
     })
+
   }
   onSubmit(){
     this.receptNaam = this.receptForm.value.receptNaam;
@@ -34,5 +35,9 @@ export class ToevoegenComponent implements OnInit {
     this.tijd = this.receptForm.value.tijd;
     this.toevoegen = this.receptservice.receptToevoegen(this.receptNaam, this.calorien, this.ingredienten, this.tijd);
     console.log(this.toevoegen);
+  }
+  //alle recepten terug geven
+  getAllrecept(){
+
   }
 }
