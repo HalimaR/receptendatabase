@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>list</title>
+</head>
+
+<body>
+    <h2>Dit is een lijst van alle inhaalexamens</h2>
+    <ul class="examen">
+        <% for(var i=0; i < inhaal.length; i++) {%>
+        <li class="examen">
+            <span><b>Naam : </b><%= inhaal[i].name %></span><br/>
+            <span>examen : </b><%= inhaal[i].examen %>, </span><br />
+            <span>reden : </b><%= inhaal[i].reden %>, </span><br />
+            <span>datum : </b><%= inhaal[i].datum %></span><br />
+        </li><br />
+        <% } %>
+    </ul>
+    <a href='/add'>examen toevoegen,</a> &nbsp;&nbsp;<a href='/search'> zoek</a>&nbsp;&nbsp;<a href='/update'> update</a>
+</body>
+
+</html>

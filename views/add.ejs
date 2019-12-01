@@ -1,24 +1,48 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html>
+
 <head>
-  <meta charset='UTF-8'>
-  <title>inhaalexamen</title>
-  <link rel='stylesheet' href='css/bootstrap.min.css'>
+    <meta charset='UTF-8'>
+    <title>examen</title>
 </head>
+
 <body>
-<div class='well'>
-  <h2>voeg een student toe</h2>
-  <br/><br/>
-  <form action='/add' method='POST'>
-   <table>
-     <tr><td>Name : </td><td><input type='text' name='naam'></td></tr>
-     <tr><td>examen : </td><td><input type='text' name='examen' size=100></td></tr>
-     <tr><td>reden : </td><td><input type='text' name='reden'></td></tr>
-    <tr><td>datum : </td><td><input type='datetime-local' name='datum'></td>
-    </tr>
-     <tr><td><button type='submit'>Toevoegen</button></td></tr>
-   </table>
-  </form>
-</div>
+    <div class='well'>
+        <h2>voeg een inhaalexamen toe</h2>
+        <br /><br />
+        <form action='/add' method='POST'>
+            <table>
+                <tr>
+                    <td>Name : </td>
+                    <td>
+                        <input type='text' name='name'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>examen : </td>
+                    <td>
+                        <input type='text' name='examen'>
+                    </td> 
+                </tr>
+                <tr>
+                    <td>reden : </td>
+                    <td>
+                        <input type='text' name='reden' size=100>
+                    </td>
+                </tr>
+                    <span>
+                        <input type='hidden' name='datum'>
+                    </span>
+                <tr>
+
+                </tr>
+                    <td>
+                        <button type='submit'>Add</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
 </body>
+
 </html>
